@@ -25,17 +25,17 @@
 		1A939F691366034F00AFEC56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1A939F6B1366034F00AFEC56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1A939F6D1366034F00AFEC56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1A939F711366034F00AFEC56 /* NYCParking-Info.plist */ = {isa = PBXFileReference; path = "NYCParking-Info.plist"; sourceTree = "<group>"; };
+		1A939F711366034F00AFEC56 /* NYCParking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NYCParking-Info.plist"; sourceTree = "<group>"; };
 		1A939F731366034F00AFEC56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1A939F751366034F00AFEC56 /* NYCParking-Prefix.pch */ = {isa = PBXFileReference; path = "NYCParking-Prefix.pch"; sourceTree = "<group>"; };
+		1A939F751366034F00AFEC56 /* NYCParking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NYCParking-Prefix.pch"; sourceTree = "<group>"; };
 		1A939F761366034F00AFEC56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1A939F781366034F00AFEC56 /* NYCParkingAppDelegate.h */ = {isa = PBXFileReference; path = NYCParkingAppDelegate.h; sourceTree = "<group>"; };
+		1A939F781366034F00AFEC56 /* NYCParkingAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NYCParkingAppDelegate.h; sourceTree = "<group>"; };
 		1A939F791366034F00AFEC56 /* NYCParkingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYCParkingAppDelegate.m; sourceTree = "<group>"; };
 		1A939F7C1366034F00AFEC56 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		1A939F7E1366034F00AFEC56 /* MainViewController.h */ = {isa = PBXFileReference; path = MainViewController.h; sourceTree = "<group>"; };
+		1A939F7E1366034F00AFEC56 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		1A939F7F1366034F00AFEC56 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		1A939F811366034F00AFEC56 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		1A939F831366034F00AFEC56 /* FlipsideViewController.h */ = {isa = PBXFileReference; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		1A939F831366034F00AFEC56 /* FlipsideViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlipsideViewController.h; sourceTree = "<group>"; };
 		1A939F841366034F00AFEC56 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
 		1A939F861366034F00AFEC56 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
