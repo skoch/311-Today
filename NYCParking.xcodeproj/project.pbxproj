@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A939F6A1366034F00AFEC56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A939F691366034F00AFEC56 /* UIKit.framework */; };
+		1A939F6C1366034F00AFEC56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A939F6B1366034F00AFEC56 /* Foundation.framework */; };
+		1A939F6E1366034F00AFEC56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A939F6D1366034F00AFEC56 /* CoreGraphics.framework */; };
+		1A939F741366034F00AFEC56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1A939F721366034F00AFEC56 /* InfoPlist.strings */; };
+		1A939F771366034F00AFEC56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A939F761366034F00AFEC56 /* main.m */; };
+		1A939F7A1366034F00AFEC56 /* NYCParkingAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A939F791366034F00AFEC56 /* NYCParkingAppDelegate.m */; };
+		1A939F7D1366034F00AFEC56 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A939F7B1366034F00AFEC56 /* MainWindow.xib */; };
+		1A939F801366034F00AFEC56 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A939F7F1366034F00AFEC56 /* MainViewController.m */; };
+		1A939F821366034F00AFEC56 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A939F811366034F00AFEC56 /* MainView.xib */; };
+		1A939F851366034F00AFEC56 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A939F841366034F00AFEC56 /* FlipsideViewController.m */; };
+		1A939F871366034F00AFEC56 /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A939F861366034F00AFEC56 /* FlipsideView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A939F651366034F00AFEC56 /* NYCParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NYCParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A939F691366034F00AFEC56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1A939F6B1366034F00AFEC56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1A939F6D1366034F00AFEC56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1A939F711366034F00AFEC56 /* NYCParking-Info.plist */ = {isa = PBXFileReference; path = "NYCParking-Info.plist"; sourceTree = "<group>"; };
+		1A939F731366034F00AFEC56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1A939F751366034F00AFEC56 /* NYCParking-Prefix.pch */ = {isa = PBXFileReference; path = "NYCParking-Prefix.pch"; sourceTree = "<group>"; };
+		1A939F761366034F00AFEC56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A939F781366034F00AFEC56 /* NYCParkingAppDelegate.h */ = {isa = PBXFileReference; path = NYCParkingAppDelegate.h; sourceTree = "<group>"; };
+		1A939F791366034F00AFEC56 /* NYCParkingAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NYCParkingAppDelegate.m; sourceTree = "<group>"; };
+		1A939F7C1366034F00AFEC56 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1A939F7E1366034F00AFEC56 /* MainViewController.h */ = {isa = PBXFileReference; path = MainViewController.h; sourceTree = "<group>"; };
+		1A939F7F1366034F00AFEC56 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		1A939F811366034F00AFEC56 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		1A939F831366034F00AFEC56 /* FlipsideViewController.h */ = {isa = PBXFileReference; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		1A939F841366034F00AFEC56 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		1A939F861366034F00AFEC56 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A939F621366034F00AFEC56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A939F6A1366034F00AFEC56 /* UIKit.framework in Frameworks */,
+				1A939F6C1366034F00AFEC56 /* Foundation.framework in Frameworks */,
+				1A939F6E1366034F00AFEC56 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A939F5A1366034F00AFEC56 = {
+			isa = PBXGroup;
+			children = (
+				1A939F6F1366034F00AFEC56 /* NYCParking */,
+				1A939F681366034F00AFEC56 /* Frameworks */,
+				1A939F661366034F00AFEC56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1A939F661366034F00AFEC56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A939F651366034F00AFEC56 /* NYCParking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A939F681366034F00AFEC56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1A939F691366034F00AFEC56 /* UIKit.framework */,
+				1A939F6B1366034F00AFEC56 /* Foundation.framework */,
+				1A939F6D1366034F00AFEC56 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A939F6F1366034F00AFEC56 /* NYCParking */ = {
+			isa = PBXGroup;
+			children = (
+				1A939F781366034F00AFEC56 /* NYCParkingAppDelegate.h */,
+				1A939F791366034F00AFEC56 /* NYCParkingAppDelegate.m */,
+				1A939F7B1366034F00AFEC56 /* MainWindow.xib */,
+				1A939F7E1366034F00AFEC56 /* MainViewController.h */,
+				1A939F7F1366034F00AFEC56 /* MainViewController.m */,
+				1A939F811366034F00AFEC56 /* MainView.xib */,
+				1A939F831366034F00AFEC56 /* FlipsideViewController.h */,
+				1A939F841366034F00AFEC56 /* FlipsideViewController.m */,
+				1A939F861366034F00AFEC56 /* FlipsideView.xib */,
+				1A939F701366034F00AFEC56 /* Supporting Files */,
+			);
+			path = NYCParking;
+			sourceTree = "<group>";
+		};
+		1A939F701366034F00AFEC56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A939F711366034F00AFEC56 /* NYCParking-Info.plist */,
+				1A939F721366034F00AFEC56 /* InfoPlist.strings */,
+				1A939F751366034F00AFEC56 /* NYCParking-Prefix.pch */,
+				1A939F761366034F00AFEC56 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A939F641366034F00AFEC56 /* NYCParking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A939F8A1366034F00AFEC56 /* Build configuration list for PBXNativeTarget "NYCParking" */;
+			buildPhases = (
+				1A939F611366034F00AFEC56 /* Sources */,
+				1A939F621366034F00AFEC56 /* Frameworks */,
+				1A939F631366034F00AFEC56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NYCParking;
+			productName = NYCParking;
+			productReference = 1A939F651366034F00AFEC56 /* NYCParking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A939F5C1366034F00AFEC56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Big Spaceship";
+			};
+			buildConfigurationList = 1A939F5F1366034F00AFEC56 /* Build configuration list for PBXProject "NYCParking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1A939F5A1366034F00AFEC56;
+			productRefGroup = 1A939F661366034F00AFEC56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A939F641366034F00AFEC56 /* NYCParking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A939F631366034F00AFEC56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A939F741366034F00AFEC56 /* InfoPlist.strings in Resources */,
+				1A939F7D1366034F00AFEC56 /* MainWindow.xib in Resources */,
+				1A939F821366034F00AFEC56 /* MainView.xib in Resources */,
+				1A939F871366034F00AFEC56 /* FlipsideView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A939F611366034F00AFEC56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A939F771366034F00AFEC56 /* main.m in Sources */,
+				1A939F7A1366034F00AFEC56 /* NYCParkingAppDelegate.m in Sources */,
+				1A939F801366034F00AFEC56 /* MainViewController.m in Sources */,
+				1A939F851366034F00AFEC56 /* FlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A939F721366034F00AFEC56 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A939F731366034F00AFEC56 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1A939F7B1366034F00AFEC56 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A939F7C1366034F00AFEC56 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A939F881366034F00AFEC56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1A939F891366034F00AFEC56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		1A939F8B1366034F00AFEC56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NYCParking/NYCParking-Prefix.pch";
+				INFOPLIST_FILE = "NYCParking/NYCParking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1A939F8C1366034F00AFEC56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NYCParking/NYCParking-Prefix.pch";
+				INFOPLIST_FILE = "NYCParking/NYCParking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A939F5F1366034F00AFEC56 /* Build configuration list for PBXProject "NYCParking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A939F881366034F00AFEC56 /* Debug */,
+				1A939F891366034F00AFEC56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A939F8A1366034F00AFEC56 /* Build configuration list for PBXNativeTarget "NYCParking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A939F8B1366034F00AFEC56 /* Debug */,
+				1A939F8C1366034F00AFEC56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A939F5C1366034F00AFEC56 /* Project object */;
+}
