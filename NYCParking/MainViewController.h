@@ -13,6 +13,9 @@
 	NSMutableData* data;
 	NSMutableString *status;
 	UIWebView *webView;
+	NSScanner *scanner;
+	IBOutlet UILabel *today;
+	IBOutlet UILabel *tomorrow;
 	
 @private
 	NSInteger depth;
@@ -21,12 +24,16 @@
 }
 
 @property (nonatomic, retain) NSURLConnection *connection;
-@property (nonatomic, retain) NSMutableData* data;
-@property (nonatomic, retain) NSMutableString* status;
-@property (nonatomic, retain) UIWebView* webView;
+@property (nonatomic, retain) NSMutableData *data;
+@property (nonatomic, retain) NSMutableString *status;
+@property (nonatomic, retain) UIWebView *webView;
+@property(nonatomic, retain) IBOutlet UILabel *today;
+@property(nonatomic, retain) IBOutlet UILabel *tomorrow;
 
 - (IBAction)showInfo:(id)sender;
 - (void)loadRSS:(NSString *)url;
 - (void)update;
+- (void)addWebView;
 - (void)removeWebView;
+
 @end
