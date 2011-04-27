@@ -14,7 +14,6 @@
 @synthesize connection;
 @synthesize data;
 @synthesize status;
-@synthesize webView;
 @synthesize today, tomorrow;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -30,38 +29,20 @@
 	[self loadRSS:@"http://www.nyc.gov/apps/311/311Today.rss"];
 }
 
-- (void)removeWebView
-{
-	[self.webView removeFromSuperview];
-	self.webView = nil;
-}
-
-- (void)addWebView
-{
-	webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 80, 320, 400)];
-	
-	for (id subview in webView.subviews)
-		if ([[subview class] isSubclassOfClass: [UIScrollView class]])
-			((UIScrollView *)subview).bounces = NO;
-	
-	//	[webView setAllowsRubberBanding:NO];
-    NSString *htmlString = [NSString stringWithFormat:@"<style type=\"text/css\">body{color:#3F3F3F;font-family:Georgia,serif;font-size:12pt;}</style>%@", [NSString stringWithFormat:@"%@", [self status]]];
-    [webView loadHTMLString:htmlString baseURL:nil];
-    [self.view addSubview:webView];
-}
-
 - (void)loadRSS:( NSString * )url
 {
 	NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60];
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];	
 }
 
-- (void)connection:(NSURLConnection *)theConnection	didReceiveData:(NSData *)incrementalData {
+- (void)connection:(NSURLConnection *)theConnection	didReceiveData:(NSData *)incrementalData
+{
     if (data==nil) data = [[NSMutableData alloc] initWithCapacity:2048];
     [data appendData:incrementalData];
 }
 
-- (void)connectionDidFinishLoading:(NSURLConnection*)theConnection {
+- (void)connectionDidFinishLoading:(NSURLConnection*)theConnection
+{
 	
 	//ASCII Method
 //    NSString *result= [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
@@ -74,12 +55,9 @@
 	[parser setDelegate:self];
 	[parser setShouldProcessNamespaces:YES];	
     
-	[parser parse]; // Parse that data..
+	[parser parse];
     [parser release];
 	
-//	output.text = [NSString stringWithFormat:@"%@", [self status]];
-	
-//	[self addWebView];
 	
 	NSArray *parts = [[self status] componentsSeparatedByString:@"<br />"];
 //	NSLog(@"parts = %@", parts);
@@ -99,75 +77,34 @@
 //			
 //		}		
 //	}
-	NSMutableArray *days = [NSMutableArray arrayWithObjects:@"NO", @"NO", nil];
+	
+	
 	int i = 0;
 	for( NSString *part in parts )
 	{
 //		NSLog(@"part = %@", part);
-		if( [part rangeOfString:@"suspended"].location == NSNotFound && ( i == 1 || i == 4 ) )
+		if( [part rangeOfString:@"suspended"].location == NSNotFound )
 		{
-//			NSLog(@"not suspended");
+			if ( i == 1 )
+			{
+				today.text = @"Today: NO";
+			}else if( i == 4 )
+			{
+				tomorrow.text = @"Tomorrow: NO";
+			}
 		}else
 		{
 			if( i == 1 )
 			{
-				[days replaceObjectAtIndex:0 withObject:@"YES"];
+				today.text = @"Today: NO";
 			}else if( i == 4 )
 			{
-				[days replaceObjectAtIndex:1 withObject:@"YES"];
+				tomorrow.text = @"Tomorrow: YES";
 			}
 		}
 		i++;
 	}
-		
-	NSString *tmp = @"Today: ";
-	if( [days objectAtIndex:0] == @"YES" )
-	{
-		tmp = [tmp stringByAppendingString:@"YES"];
-	}else
-	{
-		tmp = [tmp stringByAppendingString:@"NO"];
-	}
-	
-	today.text = tmp;
-	
-	tmp = @"Tomorrow: ";
-	if( [days objectAtIndex:1] == @"YES" )
-	{
-		tmp = [tmp stringByAppendingString:@"YES"];
-	}else
-	{
-		tmp = [tmp stringByAppendingString:@"NO"];
-	}
-	
-	tomorrow.text = tmp;
-	
-//	for( int i = 0; i < [days count]; i++ )
-//	{
-//		NSLog(@"day %@", (NSString*) days[1]);
-//	}
-//	for (NSString *day in days) {
-//		if ( day == @"YES") {
-//			<#statements#>
-//		}
-//	}
-//	NSLog(@"days %@", days);
-	
-	
-	
-//	
-//	if( [htmlString rangeOfString:@"suspended"].location == NSNotFound )
-//	{
-//		NSLog(@"not suspended");
-//	}else
-//	{
-//		
-//		NSLog(@"suspended!");
-//	}
-	
-	
-//	NSString *foundData = [self getDataBetweenFromString:htmlString leftString:@"Alternate" rightString:@"." leftOffset:0];
-//	NSLog(@"found data = %@", foundData );
+			
 	data = nil;
 }
 //
@@ -220,7 +157,7 @@
 
 - (void)parserDidStartDocument:(NSXMLParser *)parser 
 {
-    NSLog(@"Document started", nil);
+//    NSLog(@"Document started", nil);
     depth = 0;
     currentElement = nil;
 	status = [[NSMutableString alloc] init];
