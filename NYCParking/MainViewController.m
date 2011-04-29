@@ -14,7 +14,8 @@
 @synthesize connection;
 @synthesize data;
 @synthesize status;
-@synthesize today, tomorrow;
+@synthesize todayStatus, tomorrowStatus, todayDate, tomorrowDate;
+@synthesize todaysDate, tomorrowsDate;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
@@ -61,7 +62,8 @@
 	
 	NSArray *parts = [[self status] componentsSeparatedByString:@"<br />"];
 //	NSLog(@"parts = %@", parts);
-
+	
+	
 //	NSLog(@"status = %@", [self status]);
 //	[NSString stringWithFormat:parts[1]]
 //	[NSString stringWithFormat:@"%@", parts[1]]
@@ -85,21 +87,40 @@
 //		NSLog(@"part = %@", part);
 		if( [part rangeOfString:@"suspended"].location == NSNotFound )
 		{
+			if( i == 0 )
+			{
+				NSArray *dateParts = [part componentsSeparatedByString:@"<B>"];
+				NSArray *moreDateParts = [[dateParts objectAtIndex:1] componentsSeparatedByString:@"</B>"];
+				self.todaysDate = [moreDateParts objectAtIndex:0];
+			}
+			
+			if( i == 3 )
+			{
+				NSArray *dateParts = [part componentsSeparatedByString:@"<B>"];
+				NSArray *moreDateParts = [[dateParts objectAtIndex:1] componentsSeparatedByString:@"</B>"];
+				self.tomorrowsDate = [moreDateParts objectAtIndex:0];
+			}
+			
 			if ( i == 1 )
 			{
-				today.text = @"Today: NO";
+				// move the car
+				todayDate.text = [NSString stringWithFormat:@"%@", self.todaysDate];
+				todayStatus.text = @"Move the car";
 			}else if( i == 4 )
 			{
-				tomorrow.text = @"Tomorrow: NO";
+				tomorrowDate.text = [NSString stringWithFormat:@"%@", self.tomorrowsDate];
+				tomorrowStatus.text = @"Move the car";
 			}
 		}else
 		{
 			if( i == 1 )
 			{
-				today.text = @"Today: NO";
+				todayDate.text = [NSString stringWithFormat:@"%@", self.todaysDate];
+				todayStatus.text = @"Free day!";
 			}else if( i == 4 )
 			{
-				tomorrow.text = @"Tomorrow: YES";
+				tomorrowDate.text = [NSString stringWithFormat:@"%@", self.tomorrowsDate];
+				tomorrowStatus.text = @"Free day!";
 			}
 		}
 		i++;
